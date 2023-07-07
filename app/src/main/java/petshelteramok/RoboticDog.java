@@ -31,6 +31,9 @@ public class RoboticDog extends VirtualPet{
     public String getHealthDisplay(){
         return healthDisplay;
     }
+    public boolean getIsCageDirty(){
+        return isCageDirty;
+    }
 
     public void oilRobo(){
         oilLevel += 10;

@@ -5,26 +5,58 @@ import java.util.HashMap;
 public class VirtualPetShelter {
 
     private boolean shelterLitterClean = true;
-    // private String leftAlignFormat = "| %-13s | %-4d | %-4d | %-4d | \n";
+    private String organicDogFormat = "| %-13s | %-4d | %-4d | %-4d | %-4d | %-4d |\n";
+    private String roboticDogFormat = "| %-13s | %-4d | %-4d | %-4d | %-4d |\n";
+    private String organicCatFormat = "| %-13s | %-4d | %-4d | %-4d | %-4d |\n";
+    private String roboticCatFormat = "| %-13s | %-4d | %-4d |\n";
     private HashMap<String, OrganicDog> organicDogKennel = new HashMap<>();
     private HashMap<String, OrganicCat> organicCatKennel = new HashMap<>();
     private HashMap<String, RoboticDog> roboticDogKennel = new HashMap<>();
     private HashMap<String, RoboticCat> roboticCatKennel = new HashMap<>();
 
-    // public void getStatus() {
-    // // needs to display for all pets in the map
-    // System.out.format("+---------------+------+------+------+\n");
-    // System.out.format("| Pet Name | Food | Water| Play |\n");
-    // System.out.format("+---------------+------+------+------+\n");
-    // // go through list of pets and System.out.format(leftAlignFormat, petName,
-    // // respective var)
-    // for (VirtualPet pet : kennel.values()) {
-    // System.out.format(leftAlignFormat, pet.getName(), pet.getFood(),
-    // pet.getWater(), pet.getPlay());
-    // }
-    // System.out.format("+---------------+------+------+------+\n");
-    // }
-    // TODO: depreciated, need to create for each pet type
+    public void getStatus() {
+    // needs to display for all pets in the map
+    // go through list of pets and System.out.format(leftAlignFormat, petName,
+    // respective var)
+    System.out.format("+---------------+------+------+------+------+---------+\n");
+    System.out.format("| Dog Name | Food | Water| Play | Health | Cage Dirty? |\n");
+    System.out.format("+---------------+------+------+------+------+---------+\n");
+    for (OrganicDog pet : organicDogKennel.values()) {
+    System.out.format(organicDogFormat, pet.getName(), pet.getFood(),
+    pet.getWater(), pet.getPlay(), pet.getHealthDisplay(), pet.getIsCageDirty());
+    }
+    System.out.format("+---------------+------+------+------+---------+\n");
+
+    System.out.format("+---------------+------+------+------+---------+\n");
+    System.out.format("| Dog Name | Oil | Play | Health | Cage Dirty? |\n");
+    System.out.format("+---------------+------+------+------+---------+\n");
+    for (RoboticDog pet : roboticDogKennel.values()) {
+    System.out.format(roboticDogFormat, pet.getName(), pet.getOilLevel(), pet.getPlay(), pet.getHealthDisplay(), pet.getIsCageDirty());
+    }
+    System.out.format("+---------------+------+------+------+---------+\n");
+
+    System.out.format("+---------------+------+------+------+------+\n");
+    System.out.format("| Cat Name | Food | Water| Play | Health |\n");
+    System.out.format("+---------------+------+------+------+------+\n");
+    for (OrganicCat pet : organicCatKennel.values()) {
+    System.out.format(organicCatFormat, pet.getName(), pet.getFood(),
+    pet.getWater(), pet.getPlay(), pet.getHealthDisplay());
+    }
+    System.out.format("+---------------+------+------+------+------+\n");
+
+    System.out.format("+---------------+------+------+------+\n");
+    System.out.format("| Cat Name | Oil | Play | Health |\n");
+    System.out.format("+---------------+------+------+------+\n");
+    for (RoboticCat pet : roboticCatKennel.values()) {
+    System.out.format(roboticCatFormat, pet.getName(), pet.getOilLevel(), pet.getPlay(), pet.getHealthDisplay());
+    }
+    System.out.format("+---------------+------+------+------+\n");
+
+    System.out.println("The shelter litter box is currently clean: " + shelterLitterClean);
+    
+    }
+
+    
 
     public void addOrganicDog(String petName, String petDesc) {
         OrganicDog tempDog = new OrganicDog(petName, petDesc);

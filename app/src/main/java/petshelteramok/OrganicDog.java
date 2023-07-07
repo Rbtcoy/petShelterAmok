@@ -34,6 +34,9 @@ public class OrganicDog extends VirtualPet{
     public String getHealthDisplay(){
         return healthDisplay;
     }
+    public boolean getIsCageDirty(){
+        return isCageDirty;
+    }
     public OrganicDog(String name, String description) {
         this.name = name;
         this.description = description;
