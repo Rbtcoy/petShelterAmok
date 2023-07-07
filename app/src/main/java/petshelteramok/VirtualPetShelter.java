@@ -77,10 +77,10 @@ public class VirtualPetShelter {
         }
         if(!shelterLitterClean){
             for(OrganicCat pet : organicCatKennel.values()){
-
+                pet.reduceHappiness();
             }
             for(RoboticCat pet : roboticCatKennel.values()){
-                
+                pet.reduceHappiness();
             }
         }
     }

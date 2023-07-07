@@ -28,6 +28,9 @@ public class RoboticDog extends VirtualPet{
     public boolean getWalkedState(){
         return isWalked;
     }
+    public String getHealthDisplay(){
+        return healthDisplay;
+    }
 
     public void oilRobo(){
         oilLevel += 10;
