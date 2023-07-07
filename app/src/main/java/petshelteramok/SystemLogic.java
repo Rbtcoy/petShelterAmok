@@ -3,6 +3,7 @@ package petshelteramok;
 public class SystemLogic {
 
     public void promptUser() {
+        // will adjust these later to actual options
         System.out.println("What would you like to do now? \n");
         System.out.println("1. Feed them.");
         System.out.println("2. Give them water.");
