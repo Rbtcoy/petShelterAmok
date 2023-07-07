@@ -9,9 +9,9 @@ public class VirtualPetApplication {
         int userSelection = 0;
         String userNameSelect = "";
         String userDescSelect = "";
-        String userGreeting = "Please enter a name for your pet: ";
+        String userGreeting = "Greetings and welcome to Pet Shelter Deluxe™ ";
         String userDescription = "Please enter a description for your pet";
-        String userGameBridge = "Please allow me to add two pets to the shelter so that your pet won't be lonely";
+        String userGameBridge = "Please allow me to add some pets to the shelter so that your pet won't be lonely";
         String userFarewell = "Aw well, thanks for playing! Bye!";
         String userErrorText = "Im sorry, I do not understand that choice, please try again...";
         String userAdoptText = "Please select the pet that is being adopted :D ";
@@ -24,13 +24,11 @@ public class VirtualPetApplication {
         SystemLogic sus = new SystemLogic();
         VirtualPetShelter maxCareGiver = new VirtualPetShelter();
         System.out.println(userGreeting);
-        userNameSelect = input.nextLine();
-        System.out.println(userDescription);
-        userDescSelect = input.nextLine();
-        maxCareGiver.addPet(userNameSelect, userDescSelect);
         System.out.println(userGameBridge);
-        maxCareGiver.addPet("Cain", "Tough and fearless cat, a natural leader.");
-        maxCareGiver.addPet("Abel", "Although they depend on Cain, they are quite a fierce and loving dog");
+        maxCareGiver.addOrganicDog("Fido", "Shy but very faithful");
+        maxCareGiver.addOrganicCat("FeeFee", "Competitively viable battle cat");
+        maxCareGiver.addRoboticDog("Robopup 5000", "Still waiting on planned obsolescence");
+        maxCareGiver.addRoboticCat("George", "Is not aware its a robot, is it sleeping or dead?!");
         do {
             System.out.println();
             maxCareGiver.getStatus();
