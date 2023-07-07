@@ -24,7 +24,7 @@ public class VirtualPetShelter {
     // }
     // System.out.format("+---------------+------+------+------+\n");
     // }
-    // TODO: depreciated, neet to create for each pet type
+    // TODO: depreciated, need to create for each pet type
 
     public void addOrganicDog(String petName, String petDesc) {
         OrganicDog tempDog = new OrganicDog(petName, petDesc);
