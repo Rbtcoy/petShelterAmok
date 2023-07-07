@@ -26,7 +26,17 @@ public abstract class VirtualPet {
         return water;
     }
 
-    
+    public int getHealthValue() {
+        return healthValue;
+    }
+
+    public int getHappiness() {
+        return happiness;
+    }
+
+    public String getHealthDisplay() {
+        return healthDisplay;
+    }
 
     public int getPlay() {
         return play;

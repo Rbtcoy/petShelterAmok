@@ -5,7 +5,6 @@ public class RoboticCat extends VirtualPet {
     private int play = 60;
     private int oilLevel = 60;
     private int healthValue = 10;
-    private int randoTen = (int) ((Math.random() * 10)+1);
     private int happiness = 10;
     private String healthDisplay = "=";
     private String name;

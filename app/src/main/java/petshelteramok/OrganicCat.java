@@ -5,7 +5,6 @@ public class OrganicCat extends VirtualPet{
     private int water;
     private int play;
     private int healthValue = 10;
-    private int randoTen = (int) ((Math.random() * 10)+1);
     private int happiness = 10;
     private String healthDisplay = "=";
     private String name = "";
