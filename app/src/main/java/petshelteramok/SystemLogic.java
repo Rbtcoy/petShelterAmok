@@ -16,6 +16,7 @@ public class SystemLogic {
 
     public void initMenu(){
         System.out.println("What would you like to do today?");
-        
+        System.out.println("1. Interact with organic pets");
+        System.out.println("2. Interact with robotic pets");
     }
 }
