@@ -1,6 +1,6 @@
 package petshelteramok;
 
-public class RoboticDog extends VirtualPet{
+public class RoboticDog extends VirtualPet implements Walkable{
     private int play = 60;
     private int oilLevel = 60;
     private int healthValue = 10;
