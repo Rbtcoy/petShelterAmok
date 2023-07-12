@@ -33,53 +33,22 @@ public class VirtualPetApplication {
             System.out.println();
             maxCareGiver.getStatus();
             System.out.println();
-            sus.promptUser();
+            sus.initMenu();
             userSelection = input.nextInt();
             input.nextLine(); // wow i was frustrated till i used this xD
-            if (userSelection == 6) {
+            
+            if(userSelection > 5 || userSelection < 1){
+                System.out.println(userErrorText);
+            }
+            else if(userSelection == 5){
                 System.out.println(userFarewell);
                 game = false;
-            } else if (userSelection > 6 || userSelection < 1) {
-                System.out.println(userErrorText);
-            } else if (userSelection == 1) {
-                maxCareGiver.feedingTime();
-            } else if (userSelection == 2) {
-                maxCareGiver.wateringTime();
-            } else if (userSelection == 3) {
-                System.out.println(userPlayQ);
-                String userChoice = input.nextLine();
-                if(maxCareGiver.getKennel().containsKey(userChoice)){
-                maxCareGiver.playTime(userChoice);
-                } else {
-                    System.out.println(userErrorText);
-                }
-            } else if (userSelection == 4) {
-                try {
-                    System.out.println(userAdoptText);
-                    System.out.println();
-                    String petChoice = input.nextLine();
-                    if(maxCareGiver.getKennel().containsKey(petChoice)){
-                    maxCareGiver.removePet(petChoice);
-                    System.out.println(petChoice + userAdoptConfirm);
-                    } else{
-                        System.out.println(userErrorText);
-                    }
-                } catch (Exception e) {
-                    System.out.println(userErrorText);
-                }
-            } else if (userSelection == 5) {
-                    System.out.print(userAdmitTextName);
-                    
-                    String petNameChoice = input.nextLine();
-                    System.out.print(userAdmitTextDescription);
-                    
-                    String petDescChoice = input.nextLine();
-                    System.out.println(petNameChoice + " will be more than welcome here!");
-                    maxCareGiver.addPet(petNameChoice, petDescChoice);
-
             }
-            maxCareGiver.onTick();
+            else if(userSelection == 1){
+                
+            }
 
+            maxCareGiver.onTick();
             System.out.println();
         } while (game);
         input.close();

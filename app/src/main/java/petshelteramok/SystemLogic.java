@@ -2,23 +2,25 @@ package petshelteramok;
 
 public class SystemLogic {
 
-    // public void promptUser() {
-    //     // will adjust these later to actual options
-    //     System.out.println("What would you like to do now? \n");
-    //     System.out.println("1. Feed them.");
-    //     System.out.println("2. Give them water.");
-    //     System.out.println("3. Play with a pet");
-    //     System.out.println("4. Adopt a pet (remove from menu)");
-    //     System.out.println("5. Admit a pet (add a pet to menu)");
-    //     System.out.println("6. Quit T~T \n");
-    // }
-    //depricated, need to adjust for new pets
-
     public void initMenu(){
         System.out.println("What would you like to do today? ");
         System.out.println("1. Interact with organic pets");
         System.out.println("2. Interact with robotic pets");
-        System.out.println("3. Quit");
+        System.out.println("3. Admit a pet (Add a pet to a list)");
+        System.out.println("4. Adopt a pet (Remove a pet from a list)");
+        System.out.println("5. Quit");
+    }
+
+    public void organicPetMenu(){
+        System.out.println("What kind of organic pet would you like to interact with? ");
+        System.out.println("1. Organic dogs");
+        System.out.println("2. Organic cats");
+    }
+
+    public void roboticPetMenu(){
+        System.out.println("What kind of robotic pet would you like to interact with? ");
+        System.out.println("1. Robotic dogs");
+        System.out.println("2. Robotic cats");
     }
 
     public void organicDogMenu(){
