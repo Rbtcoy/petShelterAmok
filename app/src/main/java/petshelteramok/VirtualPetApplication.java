@@ -59,16 +59,20 @@ public class VirtualPetApplication {
                     if(userSelection == 1){
                         System.out.println(userAdmitTextName);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.addOrganicCat(userNameSelection, userDescSelection);
                         System.out.println(userNameSelection+userAdmitConfirmPet);
                     }
                     else if(userSelection == 2){
                         System.out.println(userAdmitTextName);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.addOrganicDog(userNameSelection, userDescSelection);
                         System.out.println(userNameSelection+userAdmitConfirmPet);
                     }
@@ -79,16 +83,20 @@ public class VirtualPetApplication {
                     if(userSelection == 1){
                         System.out.println(userAdmitTextName);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.addRoboticCat(userNameSelection, userDescSelection);
                         System.out.println(userNameSelection+userAdmitConfirmPet);
                     }
                     else if(userSelection == 2){
                         System.out.println(userAdmitTextName);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.addRoboticDog(userNameSelection, userDescSelection);
                         System.out.println(userNameSelection+userAdmitConfirmPet);
                     }
@@ -104,16 +112,20 @@ public class VirtualPetApplication {
                     if(userSelection == 1){
                         System.out.println(userAdoptNameConfirm);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.removeOrganicCat(userNameSelection);
                         System.out.println(userNameSelection+userAdoptConfirm);
                     }
                     else if(userSelection == 2){
                         System.out.println(userAdoptNameConfirm);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.removeOrganicDog(userNameSelection);
                         System.out.println(userNameSelection+userAdoptConfirm);
                     }
@@ -124,16 +136,20 @@ public class VirtualPetApplication {
                     if(userSelection == 1){
                         System.out.println(userAdoptNameConfirm);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.removeRoboticCat(userNameSelection);
                         System.out.println(userNameSelection+userAdoptConfirm);
                     }
                     else if(userSelection == 2){
                         System.out.println(userAdoptNameConfirm);
                         userNameSelection = input.nextLine();
+                        input.nextLine();
                         System.out.println(userAdmitTextDescription);
                         userDescSelection = input.nextLine();
+                        input.nextLine();
                         maxCareGiver.removeRoboticDog(userNameSelection);
                         System.out.println(userNameSelection+userAdoptConfirm);
                     }
