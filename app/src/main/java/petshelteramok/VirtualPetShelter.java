@@ -135,24 +135,24 @@ public class VirtualPetShelter {
         }
     }
 
-    public void playTime(int playerChoice) {
-        if (playerChoice == 1) {
+    public void playTime() {
+        
             for (OrganicDog pet : organicDogKennel.values()) {
                 pet.playPet();
             }
-        } else if (playerChoice == 2) {
+        
             for (OrganicCat pet : organicCatKennel.values()) {
                 pet.playPet();
             }
-        } else if (playerChoice == 3) {
+        
             for (RoboticDog pet : roboticDogKennel.values()) {
                 pet.playPet();
             }
-        } else if (playerChoice == 4) {
+        
             for (RoboticCat pet : roboticCatKennel.values()) {
                 pet.playPet();
             }
-        }
+        
     }
 
     public HashMap<String, OrganicDog> getOrganicDogKennel() {
