@@ -1,48 +1,28 @@
 package petshelteramok;
 
-public class RoboticDog extends VirtualPet implements Walkable{
-    private int play = 60;
-    private int oilLevel = 60;
-    private int healthValue = 10;
-    private int randoTen = (int) ((Math.random() * 10)+1);
-    private int happiness = 10;
-    private String healthDisplay = "=";
-    private String name = "";
-    private String description = "";
-    private boolean isWalked = false;
-    private boolean isCageDirty = false;
+public class RoboticDog extends RoboticPet implements Walkable{
     
-
-    public int getPlay() {
-        return play;
-    }
-    public int getOilLevel(){
-        return oilLevel;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getDescription() {
-        return description;
-    }
+    private boolean isWalked;
+    private boolean isCageDirty;
+    
     public boolean getWalkedState(){
         return isWalked;
     }
-    public String getHealthDisplay(){
-        return healthDisplay;
-    }
+    
     public boolean getIsCageDirty(){
         return isCageDirty;
     }
-
-    public void oilRobo(){
-        oilLevel += 10;
-    }
-
+    
     public RoboticDog(String name, String description) {
         this.name = name;
         this.description = description;
-        this.oilLevel = 60;
+        this.oilLevel = 30;
+        this.play = 60;
+        this.healthValue = 10;
+        this.happiness = 10;
+        this.healthDisplay = ":D";
+        this.isWalked = false;
+        this.isCageDirty = false;
     }
 
     public void timePass(){
@@ -70,7 +50,7 @@ public class RoboticDog extends VirtualPet implements Walkable{
         }
         isWalked = false;
     }
-    public void walkDog(){
+    public void walkThatAnimal(){
         isWalked = true;
         happiness+=2;
     }

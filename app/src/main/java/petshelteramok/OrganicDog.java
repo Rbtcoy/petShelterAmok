@@ -1,38 +1,12 @@
 package petshelteramok;
 
-public class OrganicDog extends VirtualPet{
-    private int food;
-    private int water;
-    private int play;
-    private int healthValue = 10;
+public class OrganicDog  extends OrganicPet implements Walkable{
     private int randoTen = (int) ((Math.random() * 10)+1);
-    private int happiness = 10;
-    private String healthDisplay = ":D";
-    private String name = "";
-    private String description = "";
     private boolean isWalked = false;
     private boolean isCageDirty = false;
     
-    public int getFood() {
-        return food;
-    }
-    public int getWater() {
-        return water;
-    }
-    public int getPlay() {
-        return play;
-    }
-    public String getName() {
-        return name;
-    }
-    public String getDescription() {
-        return description;
-    }
     public boolean getWalkedState(){
         return isWalked;
-    }
-    public String getHealthDisplay(){
-        return healthDisplay;
     }
     public boolean getIsCageDirty(){
         return isCageDirty;
@@ -41,7 +15,6 @@ public class OrganicDog extends VirtualPet{
         this.name = name;
         this.description = description;
         this.food = 30;
-        this.water = 60;
         this.play = 40;
     }
     
@@ -69,7 +42,7 @@ public class OrganicDog extends VirtualPet{
         isWalked = false;
     }
 
-    public void walkDog(){
+    public void walkThatAnimal(){
         isWalked = true;
     }
     public void cleanCage(){
