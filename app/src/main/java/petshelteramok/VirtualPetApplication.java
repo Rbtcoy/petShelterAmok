@@ -37,16 +37,18 @@ public class VirtualPetApplication {
             userSelection = input.nextInt();
             input.nextLine(); // wow i was frustrated till i used this xD
             
-            if(userSelection > 5 || userSelection < 1){
+            if(userSelection > 9 || userSelection < 1){
                 System.out.println(userErrorText);
             }
-            else if(userSelection == 5){
+            else if(userSelection == 9){
                 System.out.println(userFarewell);
                 game = false;
             }
             else if(userSelection == 1){
                 
-            }
+                
+                }
+            
 
             maxCareGiver.onTick();
             System.out.println();
