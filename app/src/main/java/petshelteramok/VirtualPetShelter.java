@@ -5,10 +5,10 @@ import java.util.HashMap;
 public class VirtualPetShelter {
 
     private boolean shelterLitterClean = true;
-    private String organicDogFormat = "| %-13s | %-4d | %-4d | %-4d | %-4d | %-4d |\n";
-    private String roboticDogFormat = "| %-13s | %-4d | %-4d | %-4d | %-4d |\n";
-    private String organicCatFormat = "| %-13s | %-4d | %-4d | %-4d | %-4d |\n";
-    private String roboticCatFormat = "| %-13s | %-4d | %-4d |\n";
+    private String organicDogFormat = "| %-13s | %-4d | %-4d | %-4d | %-4s | %-4b |\n";
+    private String roboticDogFormat = "| %-13s | %-4d | %-4d | %-4s | %-4b |\n";
+    private String organicCatFormat = "| %-13s | %-4d | %-4d | %-4d | %-4s |\n";
+    private String roboticCatFormat = "| %-13s | %-4d | %-4d | %-4s |\n";
     private HashMap<String, OrganicDog> organicDogKennel = new HashMap<>();
     private HashMap<String, OrganicCat> organicCatKennel = new HashMap<>();
     private HashMap<String, RoboticDog> roboticDogKennel = new HashMap<>();
@@ -18,9 +18,9 @@ public class VirtualPetShelter {
     // needs to display for all pets in the map
     // go through list of pets and System.out.format(leftAlignFormat, petName,
     // respective var)
-    System.out.format("+---------------+------+------+------+------+---------+\n");
-    System.out.format("| Dog Name | Food | Water| Play | Health | Cage Dirty? |\n");
-    System.out.format("+---------------+------+------+------+------+---------+\n");
+    System.out.format("+------------------+------+------+------+------+---------------+\n");
+    System.out.format("| Dog Name         | Food | Water| Play | Health | Cage Dirty? |\n");
+    System.out.format("+------------------+------+------+------+------+---------------+\n");
     for (OrganicDog pet : organicDogKennel.values()) {
     System.out.format(organicDogFormat, pet.getName(), pet.getFood(),
     pet.getWater(), pet.getPlay(), pet.getHealthDisplay(), pet.getIsCageDirty());
