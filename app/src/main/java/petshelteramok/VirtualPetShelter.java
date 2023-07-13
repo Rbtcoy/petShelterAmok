@@ -173,10 +173,10 @@ public class VirtualPetShelter {
 
     public void walkDogs() {
         for (OrganicDog pet : organicDogKennel.values()) {
-            pet.walkDog();
+            pet.walkThatAnimal();
         }
         for (RoboticDog pet : roboticDogKennel.values()) {
-            pet.walkDog();
+            pet.walkThatAnimal();
         }
 
     }
