@@ -3,6 +3,7 @@ package petshelteramok;
 public class RoboticDog extends RoboticPet implements Walkable{
     
     private boolean isWalked;
+    private boolean walkedBuffer;
     private boolean isCageDirty;
     
     public boolean getWalkedState(){
@@ -26,7 +27,7 @@ public class RoboticDog extends RoboticPet implements Walkable{
     }
 
     public void timePass(){
-        oilLevel -= 10;
+        oilLevel -= 2;
         if(!isWalked){
             healthValue--;
             if(randoTen >= 10){
@@ -48,11 +49,16 @@ public class RoboticDog extends RoboticPet implements Walkable{
         }else if(healthValue < 5){
             healthDisplay = ":(";
         }
-        isWalked = false;
+        if(walkedBuffer){
+            walkedBuffer = false;
+        }else{
+            isWalked = false;
+        }
     }
     public void walkThatAnimal(){
         isWalked = true;
         happiness+=2;
+        walkedBuffer = true;
     }
     public void cleanCage(){
         isCageDirty = false;

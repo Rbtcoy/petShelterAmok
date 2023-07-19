@@ -14,7 +14,7 @@ public abstract class RoboticPet extends VirtualPet{
     }
 
     public void timePass(){
-        oilLevel -= 10;
+        oilLevel -= 2;
         if(happiness < 7){
             healthValue--;
         }
