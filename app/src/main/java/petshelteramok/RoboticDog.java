@@ -15,8 +15,7 @@ public class RoboticDog extends RoboticPet implements Walkable{
     }
     
     public RoboticDog(String name, String description) {
-        this.name = name;
-        this.description = description;
+        super(name, description);
         this.oilLevel = 30;
         this.play = 60;
         this.healthValue = 10;

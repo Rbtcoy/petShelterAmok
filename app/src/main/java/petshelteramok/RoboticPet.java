@@ -13,6 +13,10 @@ public abstract class RoboticPet extends VirtualPet{
         oilLevel += 10;
     }
 
+    public RoboticPet(String name, String description){
+        super(name, description);
+    }
+
     public void timePass(){
         oilLevel -= 2;
         if(happiness < 7){

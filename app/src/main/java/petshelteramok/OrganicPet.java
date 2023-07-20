@@ -20,7 +20,9 @@ public abstract class OrganicPet extends VirtualPet {
         
     }
     
-    
+    public OrganicPet(String name, String description){
+        super(name,description);
+    }
     
     
 }

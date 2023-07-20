@@ -12,10 +12,8 @@ public class OrganicDog  extends OrganicPet implements Walkable{
         return isCageDirty;
     }
     public OrganicDog(String name, String description) {
-        this.name = name;
-        this.description = description;
-        this.food = 30;
-        this.play = 40;
+        super(name, description);
+        
     }
     
     public void timePass(){
