@@ -1,6 +1,7 @@
 package petshelteramok;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class VirtualPetShelter {
 
@@ -9,6 +10,11 @@ public class VirtualPetShelter {
     private String roboticDogFormat = "| %-13s | %-4d | %-4d | %-4s | %-4b |\n";
     private String organicCatFormat = "| %-13s | %-4d | %-4d | %-4d | %-4s |\n";
     private String roboticCatFormat = "| %-13s | %-4d | %-4d | %-4s |\n";
+    String userAdmitTextName = "What is the name of the pet you'd like to admit";
+    String userAdmitTextDescription = "Please give a brief description of the pet";
+    String userAdmitConfirmPet = " will be plenty welcome here!";
+    String userAdoptNameConfirm = "What is the name of the pet that you would like to adopt? ";
+    String userAdoptConfirm = " will make a great pet for you, have fun!";
     private HashMap<String, OrganicDog> organicDogKennel = new HashMap<>();
     private HashMap<String, OrganicCat> organicCatKennel = new HashMap<>();
     private HashMap<String, RoboticDog> roboticDogKennel = new HashMap<>();
@@ -201,5 +207,56 @@ public class VirtualPetShelter {
 
     public void cleanLitterBox(){
         shelterLitterClean = true;
+    }
+
+    public void admitPet(int petTypeChoice){
+        String userNameSelection;
+        String userDescSelection;
+        Scanner input = new Scanner(System.in);
+        System.out.println(userAdmitTextName);
+        userNameSelection = input.nextLine();
+        input.nextLine();
+        System.out.println(userAdmitTextDescription);
+        userDescSelection = input.nextLine();
+        input.nextLine();
+        if(petTypeChoice == 1){
+            addOrganicCat(userNameSelection, userDescSelection);
+        }
+        else if(petTypeChoice == 2){
+            addOrganicDog(userNameSelection, userDescSelection);
+        }
+        else if(petTypeChoice == 3){
+            addRoboticCat(userNameSelection, userDescSelection);
+        }
+        else if(petTypeChoice == 4){
+            addRoboticDog(userNameSelection, userDescSelection);
+        }
+        System.out.println(userNameSelection + userAdmitConfirmPet);
+
+        
+    }
+
+    public void adoptPet(int petTypeChoice){
+        String userNameSelection;
+        Scanner input = new Scanner(System.in);
+        System.out.println(userAdoptNameConfirm);
+        userNameSelection = input.nextLine();
+        input.nextLine();
+        System.out.println();
+        if(petTypeChoice == 1){
+            removeOrganicCat(userNameSelection);
+        }
+        else if(petTypeChoice == 2){
+            removeOrganicDog(userNameSelection);
+        }
+        else if(petTypeChoice == 3){
+            removeRoboticCat(userNameSelection);
+        }
+        else if(petTypeChoice == 4){
+            removeRoboticDog(userNameSelection);
+        }
+        System.out.println(userNameSelection + userAdoptConfirm);
+
+        
     }
 }
